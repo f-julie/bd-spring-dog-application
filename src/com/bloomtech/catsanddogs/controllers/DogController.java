@@ -14,6 +14,7 @@ public class DogController
     @GetMapping(value = "/dogs", produces = {"application/json"})
     public ResponseEntity<?> findAllDogs()
     {
+        System.out.println("Method in DogController class was called");
         return new ResponseEntity<>(dogRepos.getDogs(), HttpStatus.OK);
     }
 }
